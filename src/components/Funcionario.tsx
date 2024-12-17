@@ -13,6 +13,15 @@ type FuncionarioProps = {
   }[];
 };
 
+type PropsCalculoSalario = {
+  salarioBase: number;
+  dependentes: {
+    nome: string;
+    data_nascimento: string;
+    abono_salarial: number;
+  }[];
+};
+
 function Funcionario({
   nome,
   setor,
@@ -20,12 +29,23 @@ function Funcionario({
   salarioBase,
   dependentes,
 }: FuncionarioProps) {
+  const calculaSalario = ({
+    salarioBase,
+    dependentes,
+  }: PropsCalculoSalario) => {
+    let salarioTotal = salarioBase;
+    for (let i = 0; i < dependentes.length; i++) {
+      salarioTotal += dependentes[i].abono_salarial;
+    }
+    return salarioTotal;
+  };
+
   return (
     <>
       <h2>Nome: {nome}</h2>
       <p>Setor: {setor}</p>
       <p>Data de Adimissão: {data}</p>
-      <p>Salário: {salarioBase}</p>
+      <p>Salário: {calculaSalario({ salarioBase, dependentes })}</p>
       {dependentes.length > 0 ? (
         <>
           <h3>Dependentes: </h3>
