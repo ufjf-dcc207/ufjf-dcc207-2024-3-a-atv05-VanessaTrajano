@@ -5,7 +5,11 @@ type FuncionarioProps = {
   setor: string;
   data: string;
   salarioBase: number;
-  dependentes: [];
+  dependentes: {
+    nome: string,
+    data_nascimento: string,
+    abono_salarial: number,
+  }[],
 };
 
 function Funcionario({
@@ -22,7 +26,7 @@ function Funcionario({
       <p>Data de Adimissão: {data}</p>
       <p>Salário: {salarioBase}</p>
       <h3>Dependentes: </h3>
-      <div>{dependentes}</div>
+      <div>{}</div>
     </>
   );
 }
