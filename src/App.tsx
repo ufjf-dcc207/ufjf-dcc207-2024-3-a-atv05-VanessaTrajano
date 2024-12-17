@@ -1,9 +1,10 @@
 import './App.css'
+import Funcionario from './components/Funcionario'
 
 function App() {
   return (
     <>
-      <p>funciona</p>
+      <Funcionario/>
     </>
   )
 }
