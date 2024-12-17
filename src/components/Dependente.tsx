@@ -1,10 +1,15 @@
 import './Dependente.css'
 
-function Dependente() {
+type DependenteProps = {
+    nome: string, 
+    data: string,
+}
+
+function Dependente({nome, data}: DependenteProps) {
   return (
     <>
-      <p>Nome: </p>
-      <p>Data de Nascimento: </p>
+      <p>Nome: {nome}</p>
+      <p>Data de Nascimento: {data}</p>
     </>
   )
 }
