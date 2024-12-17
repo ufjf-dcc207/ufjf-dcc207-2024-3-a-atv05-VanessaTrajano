@@ -1,3 +1,4 @@
+import Dependente from "./Dependente";
 import "./Funcionario.css";
 
 type FuncionarioProps = {
@@ -6,10 +7,10 @@ type FuncionarioProps = {
   data: string;
   salarioBase: number;
   dependentes: {
-    nome: string,
-    data_nascimento: string,
-    abono_salarial: number,
-  }[],
+    nome: string;
+    data_nascimento: string;
+    abono_salarial: number;
+  }[];
 };
 
 function Funcionario({
@@ -25,8 +26,21 @@ function Funcionario({
       <p>Setor: {setor}</p>
       <p>Data de Adimissão: {data}</p>
       <p>Salário: {salarioBase}</p>
-      <h3>Dependentes: </h3>
-      <div>{}</div>
+      {dependentes.length > 0 ? (
+        <>
+          <h3>Dependentes: </h3>
+          <div>
+            {dependentes.map((dependente) => (
+              <Dependente
+                nome={dependente.nome}
+                data={dependente.data_nascimento}
+              />
+            ))}
+          </div>
+        </>
+      ) : (
+        <></>
+      )}
     </>
   );
 }

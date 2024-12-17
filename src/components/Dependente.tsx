@@ -8,7 +8,7 @@ type DependenteProps = {
 function Dependente({nome, data}: DependenteProps) {
   return (
     <>
-      <p>Nome: {nome}</p>
+      <h4>Nome: {nome}</h4>
       <p>Data de Nascimento: {data}</p>
     </>
   )
