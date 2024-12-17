@@ -21,7 +21,7 @@ function Funcionario({
   };
 
   return (
-    <>
+    <div className="funcionario-container">
       <h2>Nome: {nome}</h2>
       <p>Setor: {setor}</p>
       <p>Data de Adimissão: {data}</p>
@@ -29,7 +29,7 @@ function Funcionario({
       {dependentes.length > 0 ? (
         <>
           <h3>Dependentes: </h3>
-          <div>
+          <div className="dependentes-container">
             {dependentes.map((dependente) => (
               <Dependente
                 nome={dependente.nome}
@@ -41,7 +41,7 @@ function Funcionario({
       ) : (
         <></>
       )}
-    </>
+    </div>
   );
 }
 

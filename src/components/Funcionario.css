@@ -1,0 +1,16 @@
+.funcionario-container{
+    width: 30%;
+    height: 30vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    background-color: rgb(105, 105, 105, 0.5);
+    border-radius: 30px;
+}
+
+.dependentes-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

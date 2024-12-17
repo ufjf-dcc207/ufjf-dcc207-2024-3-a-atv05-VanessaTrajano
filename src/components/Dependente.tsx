@@ -3,10 +3,10 @@ import { DependenteProps } from '../types'
 
 function Dependente({nome, data}: DependenteProps) {
   return (
-    <>
-      <h4>Nome: {nome}</h4>
-      <p>Data de Nascimento: {data}</p>
-    </>
+    <div className='dependente-container'>
+      <h4>Nome: {nome}</h4> 
+      <p>Data de Nascimento: <br /> {data}</p>
+    </div>
   )
 }
 

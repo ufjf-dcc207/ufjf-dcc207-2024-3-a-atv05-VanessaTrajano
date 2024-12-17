@@ -4,7 +4,7 @@ import funcionarios from "./ufjf-dcc207-2024-3-a-atv05.json";
 
 function App() {
   return (
-    <>
+    <div className="app-container">
       {funcionarios.funcionarios.map((funcionario) => (
         <Funcionario
           key={funcionario.nome_completo}
@@ -15,7 +15,7 @@ function App() {
           dependentes={funcionario.dependentes}
         />
       ))}
-    </>
+    </div>
   );
 }
 
