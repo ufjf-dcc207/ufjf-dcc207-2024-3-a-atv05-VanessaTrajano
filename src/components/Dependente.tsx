@@ -1,9 +1,5 @@
 import './Dependente.css'
-
-type DependenteProps = {
-    nome: string, 
-    data: string,
-}
+import { DependenteProps } from '../types'
 
 function Dependente({nome, data}: DependenteProps) {
   return (

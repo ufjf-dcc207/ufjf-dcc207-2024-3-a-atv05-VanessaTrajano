@@ -1,26 +1,6 @@
 import Dependente from "./Dependente";
 import "./Funcionario.css";
-
-type FuncionarioProps = {
-  nome: string;
-  setor: string;
-  data: string;
-  salarioBase: number;
-  dependentes: {
-    nome: string;
-    data_nascimento: string;
-    abono_salarial: number;
-  }[];
-};
-
-type PropsCalculoSalario = {
-  salarioBase: number;
-  dependentes: {
-    nome: string;
-    data_nascimento: string;
-    abono_salarial: number;
-  }[];
-};
+import { FuncionarioProps, PropsCalculoSalario } from "../types";
 
 function Funcionario({
   nome,
