@@ -1,18 +1,30 @@
-import './Funcionario.css'
+import "./Funcionario.css";
 
-function Funcionario() {
+type FuncionarioProps = {
+  nome: string;
+  setor: string;
+  data: string;
+  salarioBase: number;
+  dependentes: [];
+};
+
+function Funcionario({
+  nome,
+  setor,
+  data,
+  salarioBase,
+  dependentes,
+}: FuncionarioProps) {
   return (
     <>
-      <h2>Nome: </h2>
-      <p>Setor: </p>
-      <p>Data de Adimissão: </p>
-      <p>Salário: </p>
+      <h2>Nome: {nome}</h2>
+      <p>Setor: {setor}</p>
+      <p>Data de Adimissão: {data}</p>
+      <p>Salário: {salarioBase}</p>
       <h3>Dependentes: </h3>
-      <div>
-        aqui vão entrar os dependentes
-      </div>
+      <div>{dependentes}</div>
     </>
-  )
+  );
 }
 
-export default Funcionario
+export default Funcionario;
