@@ -25,7 +25,7 @@ function Funcionario({
       <h2>Nome: {nome}</h2>
       <p>Setor: {setor}</p>
       <p>Data de Adimissão: {data}</p>
-      <p>Salário: {calculaSalario({ salarioBase, dependentes })}</p>
+      <p>Salário: R$ {calculaSalario({ salarioBase, dependentes })},00</p>
       {dependentes.length > 0 ? (
         <>
           <h3>Dependentes: </h3>
