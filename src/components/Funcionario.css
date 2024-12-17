@@ -11,6 +11,7 @@
 
 .dependentes-container{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
+    margin-left: 10px;
 }
