@@ -3,7 +3,8 @@ import './Dependente.css'
 function Dependente() {
   return (
     <>
-      <p>funciona</p>
+      <p>Nome: </p>
+      <p>Data de Nascimento: </p>
     </>
   )
 }
