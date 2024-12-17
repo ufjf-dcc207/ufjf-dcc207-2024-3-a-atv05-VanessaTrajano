@@ -1,6 +1,7 @@
 import Dependente from "./Dependente";
 import "./Funcionario.css";
 import { FuncionarioProps, PropsCalculoSalario } from "../types";
+import transformaFormatoData from "../transformaFormatoData";
 
 function Funcionario({
   nome,
@@ -24,7 +25,7 @@ function Funcionario({
     <div className="funcionario-container">
       <h2>Nome: {nome}</h2>
       <p>Setor: {setor}</p>
-      <p>Data de Adimissão: {data}</p>
+      <p>Data de Adimissão: {transformaFormatoData(data)}</p>
       <p>Salário: R$ {calculaSalario({ salarioBase, dependentes })},00</p>
       {dependentes.length > 0 ? (
         <>
